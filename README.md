@@ -33,7 +33,7 @@ The easiest way to deploy this userbot
 
 ## Generate String
 Generate string using repl.it
-<p><a href="https://string.projectalf.repl.run/"> <img src="https://img.shields.io/badge/Generate%20Session-lightgrey?style=for-the-badge&logo=repl.it" width="150" height="24.35"/></a></p>
+<p><a href="https://generatestringsession.sandeep1709.repl.run/"> <img src="https://img.shields.io/badge/Generate%20Session-lightgrey?style=for-the-badge&logo=repl.it" width="150" height="24.35"/></a></p>
 
 ## Groups and Support
 Join [Userbot Indonesia Channel](https://t.me/userbotindocloud) for update notifications or announcement.
