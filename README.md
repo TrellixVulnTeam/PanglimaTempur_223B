@@ -1,7 +1,7 @@
 # PanglimaTempur-UserBot
 
 
-![logo](https://telegra.ph/file/609b7969da44841b31470.png)
+![logo](https://telegra.ph/file/07a410320301d394df744.jpg)
 
 <p align="centre"><a href="https://t.me/userbotindo"> <img src="https://img.shields.io/badge/telegram-Support_Group-red?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/iunderhere/PanglimaTempur/stargazers"><img src="https://img.shields.io/github/stars/iunderhere/PanglimaTempur?label=Start&logoColor=blue&style=social"></a><a href="https://github.com/iunderhere/PanglimaTempur/fork"><img src="https://img.shields.io/github/forks/iunderhere/PanglimaTempur?label=Fork&logoColor=red&style=social"></a>	
 
