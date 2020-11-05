@@ -17,7 +17,9 @@ async def cmd_list(event):
         reply_to_id = event.reply_to_msg_id
     input_str = event.pattern_match.group(1)
     if input_str == "text":
-        string = "Total {count} commands found in {plugincount} plugins of PanglimaTempur\n\n"
+        string = (
+            "Total {count} commands found in {plugincount} plugins of PanglimaTempur\n\n"
+        )
         catcount = 0
         plugincount = 0
         for i in sorted(CMD_LIST):
@@ -39,9 +41,7 @@ async def cmd_list(event):
                 .get("key")
             )
             url = f"https://nekobin.com/{key}"
-            reply_text = (
-                f"**All commands of the PanglimaTempur can be seen [here]({url})**"
-            )
+            reply_text = f"**All commands of the PanglimaTempur can be seen [here]({url})**"
             await event.edit(reply_text)
             return
         await event.edit(string.format(count=catcount, plugincount=plugincount))
@@ -51,7 +51,7 @@ async def cmd_list(event):
             string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
             catcount = 0
             for i in CMD_LIST[input_str]:
-                string += f"  •  <code>{i}</code>"
+                string += f" •  <code>{i}</code>"
                 string += "\n"
                 catcount += 1
             await event.edit(
@@ -123,7 +123,7 @@ async def info(event):
             string = "<b>{count} Commands found in plugin {input_str}:</b>\n\n"
             catcount = 0
             for i in SUDO_LIST[input_str]:
-                string += f"  •  <code>{i}</code>"
+                string += f" •  <code>{i}</code>"
                 string += "\n"
                 catcount += 1
             await event.reply(
