@@ -1,7 +1,7 @@
 {
-  "name": "Catuserbot",
-  "description": "Userbot created by https://t.me/mrconfused contact @catuserbot_support for support and Custom fork by @Jisan7509",
-  "logo": "https://telegra.ph/file/3d60313110c58684b31ea.jpg",
+  "name": "AkarataProject",
+  "description": "Repo based on https://github.com/sandy1709/catuserbot and modified by @Akarata",
+  "logo": "https://telegra.ph/file/47194bb1f28ad74c63872.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Jisan09/catuserbot/",
+  "repository": "https://github.com/Akarata/AkaProject",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -23,7 +23,7 @@
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Give your name, like Jisan",
+      "description": "Give your name, Example = Akarata",
       "value": ""
     },
     "APP_ID": {
@@ -103,7 +103,7 @@
     },
     "TZ": {
       "description": "Required for Correct Time on autopic/get time. Know your timezone from http://www.timezoneconverter.com/cgi-bin/findzone.tzc",
-      "value": "Asia/Kolkata",
+      "value": "Asia/Indonesia",
       "required": false
     }
   },
@@ -112,7 +112,7 @@
     "options": {
       "version": "12"
     }
-  }],
+}],
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   },{
@@ -130,4 +130,4 @@
   },{
     "url": "heroku/python"
   }]
-}
+ }
