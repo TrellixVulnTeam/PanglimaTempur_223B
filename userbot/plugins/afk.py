@@ -1,4 +1,4 @@
-# Afk plugin from catuserbot ported from uniborg
+# Afk plugin from Akarata ported from uniborg
 import asyncio
 from datetime import datetime
 
@@ -52,7 +52,7 @@ async def set_not_afk(event):
     if "afk" not in current_message and "on" in USERAFK_ON:
         shite = await event.client.send_message(
             event.chat_id,
-            "`Back alive! No Longer afk.\nWas afk for " + endtime + "`",
+            "`Aku telah kembali! Tidak lama Offline.\nOffline Sejak " + endtime + "`",
         )
         USERAFK_ON = {}
         afk_time = None
@@ -62,7 +62,7 @@ async def set_not_afk(event):
             await event.client.send_message(
                 BOTLOG_CHATID,
                 "#AFKFALSE \n`Set AFK mode to False\n"
-                + "Back alive! No Longer afk.\nWas afk for "
+                + "Aku telah kembali! Tidak lama Offline.\nOffline Sejak "
                 + endtime
                 + "`",
             )
@@ -107,9 +107,9 @@ async def on_afk(event):
     if USERAFK_ON and not (await event.get_sender()).bot:
         msg = None
         message_to_reply = (
-            f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **{reason}"
+            f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}` **yang lalu** \n**Karena : **{reason}"
             if reason
-            else f"**I am AFK**\n\n**AFK Since :** `{endtime}`\n**Reason : **`Not Mentioned ( ಠ ʖ̯ ಠ)`"
+            else f"**Aku Sedang Offline**\n\n**Offline Sejak :** `{endtime}`\n**Karena : **`Sedang Sibuk`"
         )
         if event.chat_id not in Config.UB_BLACK_LIST_CHAT:
             msg = await event.reply(message_to_reply)
@@ -159,9 +159,9 @@ async def _(event):
             afk_time = datetime.now()
         USERAFK_ON = f"on: {reason}"
         if reason:
-            await edit_delete(event, f"`I shall be Going afk! because ~` {reason}", 5)
+            await edit_delete(event, f"`Aku Akan Offline Karena ~` {reason}", 5)
         else:
-            await edit_delete(event, f"`I shall be Going afk! `", 5)
+            await edit_delete(event, f"`Aku Akan Offline `", 5)
         if BOTLOG:
             if reason:
                 await event.client.send_message(
@@ -177,12 +177,11 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "afk": "__**PLUGIN NAME :** Afk__\
-\n\n📌** CMD ➥** `.afk` [Optional Reason]\
-\n**USAGE   ➥  **Sets you as afk.\nReplies to anyone who tags/PM's \
-you telling them that you are AFK(reason)\n\n__Switches off AFK when you type back anything, anywhere.__\
-\n\n**Note :** If you want AFK with hyperlink use [ ; ] after reason, then paste the media link.\
-\n**Example :** `.afk busy now ;<Media_link>`\
+        "afk": "__**Nama Plugin :** Afk__\
+\n\n✅** CMD ➥** `.afk` [Optional Reason]\
+\n**Digunakan   ➥  **Memberitahu bahwa kamu sedang offline.\nMembalas pesan mereka yang men tag akun mu \
+\n\n**Catatan :** jika Kamu ingin afk dengan menggunakan hyper link [ ; ] Setelah alasan, lalu tempel tautan media.\
+\n**Contoh :** `.afk sekarang sibuk ;<Media_link>`\
 "
     }
 )
