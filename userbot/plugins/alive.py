@@ -10,7 +10,7 @@ CAT_IMG = Config.ALIVE_PIC
 JISAN = (
     str(Config.CUSTOM_ALIVE_TEXT)
     if Config.CUSTOM_ALIVE_TEXT
-    else "❤ I'M ALIVE MASTER ❤"
+    else "`PanglimaTempur is running...`"
 )
 
 
@@ -25,18 +25,21 @@ async def amireallyalive(alive):
     if alive.reply_to_msg_id:
         reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
-        cat_caption = f"<b>{JISAN}</b>\n\n"
-        cat_caption += f"<b>● »» [ 👤 ] ➥ My Master : {hmention}</b>\n"
-        cat_caption += f"<b>● »» [ 🕒 ] ➥ Uptime :</b> <code>{uptime}</code>\n"
-        cat_caption += f"<b>● »» [ 🐍 ] ➥ Python :</b> <code>{python_version()}</code>\n"
+        cat_caption = f"<b>{JISAN}</b>\n"
+        
+        cat_caption += f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        cat_caption += f"┣[ 👤`User           :` {hmention}\n"
+        cat_caption += f"┣[ 🕒 `Uptime     :` <code>{uptime}</code>\n"
+        cat_caption += f"┣[ 🐍 `Python     :` <code>{python_version()}</code>\n"
         cat_caption += (
-            f"<b>● »» [ ⚙️ ] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
+            f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
         )
-        cat_caption += f"<b>● »» [ 🤖 ] ➥ Bot :</b> <code>{catversion}</code>\n"
+        cat_caption += f"┣[ 🤖 `Bot            :` <code>{catversion}</code>\n"
         cat_caption += (
-            f"<b>● »» [ 💻 ] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
+            f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
         )
-        cat_caption += "   | <a href = https://github.com/Akarata/AkaProject><b>Akarata_Project</b></a> | "
+        cat_caption += f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
+        cat_caption += "<a href = https://github.com/iunderhere/PanglimaTempur>`PanglimaTempur-UserBot`</a>"
 
         await alive.client.send_file(
             alive.chat_id,
@@ -51,14 +54,16 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"<b>{JISAN}</b>\n\n"
-            f"<b>● »» [👤] ➥ My Master : {hmention}</b>\n"
-            f"<b>● »» [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
-            f"<b>● »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
-            f"<b>● »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
-            f"<b>● »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
-            f"<b>● »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    | <a href = https://github.com/Akarata/AkaProject><b>Akarata_Project</b></a> | ",
+            f"<b>{JISAN}</b>\n"
+            f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            f"┣[ 👤 `User          :` {hmention}\n"
+            f"┣[ 🕒 `Uptime     :` <code>{uptime}</code>\n"
+            f"┣[ 🐍 `Python     :` <code>{python_version()}</code>\n"
+            f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
+            f"┣[ 🤖 `Bot            :` <code>{catversion}</code>\n"
+            f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
+            f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
+            "<a href = https://github.com/iunderhere/PanglimaTempur>`PanglimaTempur-UserBot`</a>",
             parse_mode="html",
         )
 
