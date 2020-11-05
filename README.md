@@ -41,5 +41,4 @@ Join [Userbot Indonesia Channel](https://t.me/userbotindocloud) for update notif
 Join [Userbotindo Support Group](https://t.me/userbotindo) for discussion, bug reporting, and help.
 
 ## Partner
-*   [Ajibcdefgh](https://github.com/Ajibcdefgh/ProjectDark) - ProjectDark
 *   [Akarata](https://github.com/Akarata/AkaProject) - AkarataProject
