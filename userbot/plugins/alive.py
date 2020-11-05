@@ -10,7 +10,7 @@ CAT_IMG = Config.ALIVE_PIC
 JISAN = (
     str(Config.CUSTOM_ALIVE_TEXT)
     if Config.CUSTOM_ALIVE_TEXT
-    else "`PanglimaTempur is running...`"
+    else "PanglimaTempur is running..."
 )
 
 
@@ -25,17 +25,17 @@ async def amireallyalive(alive):
     if alive.reply_to_msg_id:
         reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
-        cat_caption = f"<b>{JISAN}</b>\n"
+        cat_caption = f"{JISAN}\n"
 
         cat_caption += f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        cat_caption += f"┣[ 👤`User           :` {hmention}\n"
-        cat_caption += f"┣[ 🕒 `Uptime     :` <code>{uptime}</code>\n"
-        cat_caption += f"┣[ 🐍 `Python     :` <code>{python_version()}</code>\n"
+        cat_caption += f"┣[ 👤 `User      :` {hmention}\n"
+        cat_caption += f"┣[ 🕒 `Uptime    :` <code>{uptime}</code>\n"
+        cat_caption += f"┣[ 🐍 `Python    :` <code>{python_version()}</code>\n"
         cat_caption += f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
-        cat_caption += f"┣[ 🤖 `Bot            :` <code>{catversion}</code>\n"
-        cat_caption += f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
+        cat_caption += f"┣[ 🤖 `Bot       :` <code>{catversion}</code>\n"
+        cat_caption += f"┣[ 💻 `Database  :` <code>{check_sgnirts}</code>\n"
         cat_caption += f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        cat_caption += "<a href = https://github.com/iunderhere/PanglimaTempur>`PanglimaTempur-UserBot`</a>"
+        cat_caption += "I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a>"
 
         await alive.client.send_file(
             alive.chat_id,
@@ -50,16 +50,16 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"<b>{JISAN}</b>\n"
+            f"`{JISAN}`\n"
             f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            f"┣[ 👤 `User          :` {hmention}\n"
-            f"┣[ 🕒 `Uptime     :` <code>{uptime}</code>\n"
-            f"┣[ 🐍 `Python     :` <code>{python_version()}</code>\n"
+            f"┣[ 👤 `User      :` {hmention}\n"
+            f"┣[ 🕒 `Uptime    :` <code>{uptime}</code>\n"
+            f"┣[ 🐍 `Python    :` <code>{python_version()}</code>\n"
             f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
-            f"┣[ 🤖 `Bot            :` <code>{catversion}</code>\n"
-            f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
+            f"┣[ 🤖 `Bot       :` <code>{catversion}</code>\n"
+            f"┣[ 💻 `Database  :` <code>{check_sgnirts}</code>\n"
             f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            "<a href = https://github.com/iunderhere/PanglimaTempur>`PanglimaTempur-UserBot`</a>",
+            "I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a>",
             parse_mode="html",
         )
 
