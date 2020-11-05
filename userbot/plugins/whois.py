@@ -124,7 +124,7 @@ async def get_full_user(event):
 @bot.on(admin_cmd(pattern="whois(?: |$)(.*)"))
 @bot.on(sudo_cmd(pattern="whois(?: |$)(.*)", allow_sudo=True))
 async def who(event):
-    cat = await edit_or_reply(event, "`Fetching userinfo wait...`")
+    cat = await edit_or_reply(event, "`Sabar ngab gw lagi cari tahu...`")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     replied_user = await get_user(event)
@@ -219,17 +219,17 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
     caption = "<b><i>USER INFO from Durov's Database :</i></b>\n\n"
-    caption += f"<b>👤 First Name:</b> {first_name} {last_name}\n"
-    caption += f"<b>🤵 Username:</b> {username}\n"
-    caption += f"<b>🔖 ID:</b> <code>{user_id}</code>\n"
-    caption += f"<b>🌏 Data Centre ID:</b> {dc_id}\n"
-    caption += f"<b>🖼 Number of Profile Pics:</b> {replied_user_profile_photos_count}\n"
-    caption += f"<b>🤖 Is Bot:</b> {is_bot}\n"
-    caption += f"<b>🔏 Is Restricted:</b> {restricted}\n"
-    caption += f"<b>🌐 Is Verified by Telegram:</b> {verified}\n\n"
-    caption += f"<b>✍️ Bio:</b> \n<code>{user_bio}</code>\n\n"
-    caption += f"<b>👥 Common Chats with this user:</b> {common_chat}\n"
-    caption += f"<b>🔗 Permanent Link To Profile:</b> "
+    caption += f"<b>Nama Depan :</b> {first_name} {last_name}\n"
+    caption += f"<b>Username   :</b> {username}\n"
+    caption += f"<b>ID         :</b> <code>{user_id}</code>\n"
+    caption += f"<b>Data       :</b> {dc_id}\n"
+    caption += f"<b>Amount PP  :</b> {replied_user_profile_photos_count}\n"
+    caption += f"<b>Is Bot     :</b> {is_bot}\n"
+    caption += f"<b>Restricted :</b> {restricted}\n"
+    caption += f"<b>Verified   :</b> {verified}\n\n"
+    caption += f"<b>Bio:</b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b>Common Chats:</b> {common_chat}\n"
+    caption += f"<b>Link Profile:</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     return photo, caption
 
