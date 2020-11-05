@@ -10,9 +10,8 @@ CAT_IMG = Config.ALIVE_PIC
 JISAN = (
     str(Config.CUSTOM_ALIVE_TEXT)
     if Config.CUSTOM_ALIVE_TEXT
-    else "✮ MY BOT IS RUNNING SUCCESFULLY ✮"
+    else "❤ I'M ALIVE MASTER ❤"
 )
-EMOJI = str(Config.CUSTOM_ALIVE_EMOJI) if Config.CUSTOM_ALIVE_EMOJI else "✧✧"
 
 
 @bot.on(admin_cmd(outgoing=True, pattern="alive$"))
@@ -27,19 +26,18 @@ async def amireallyalive(alive):
         reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n\n"
-        cat_caption += f"<b>{EMOJI} Master : {hmention}</b>\n"
-        cat_caption += f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b>● »» [ 👤 ] ➥ My Master : {hmention}</b>\n"
+        cat_caption += f"<b>● »» [ 🕒 ] ➥ Uptime :</b> <code>{uptime}</code>\n"
+        cat_caption += f"<b>● »» [ 🐍 ] ➥ Python :</b> <code>{python_version()}</code>\n"
         cat_caption += (
-            f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
+            f"<b>● »» [ ⚙️ ] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
         )
+        cat_caption += f"<b>● »» [ 🤖 ] ➥ Bot :</b> <code>{catversion}</code>\n"
         cat_caption += (
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
+            f"<b>● »» [ 💻 ] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
         )
-        cat_caption += (
-            f"<b>{EMOJI} Catuserbot Version :</b> <code>{catversion}</code>\n"
-        )
-        cat_caption += f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-        cat_caption += "    <a href = https://github.com/sandy1709/catuserbot><b>GoodCat</b></a> | <a href = https://github.com/Jisan09/catuserbot><b>BadCat</b></a> | <a href = https://t.me/catuserbot_support><b>Support</b></a>"
+        cat_caption += "   | <a href = https://github.com/Akarata/AkaProject><b>Akarata_Project</b></a> | "
+
         await alive.client.send_file(
             alive.chat_id,
             CAT_IMG,
@@ -54,13 +52,13 @@ async def amireallyalive(alive):
         await edit_or_reply(
             alive,
             f"<b>{JISAN}</b>\n\n"
-            f"<b>{EMOJI} Master : {hmention}</b>\n"
-            f"<b>{EMOJI} Uptime :</b> <code>{uptime}</code>\n"
-            f"<b>{EMOJI} Python Version :</b> <code>{python_version()}</code>\n"
-            f"<b>{EMOJI} Telethon version :</b> <code>{version.__version__}</code>\n"
-            f"<b>{EMOJI} Catuserbot Version :</b> <code>{catversion}</code>\n"
-            f"<b>{EMOJI} Database :</b> <code>{check_sgnirts}</code>\n\n"
-            "    <a href = https://github.com/sandy1709/catuserbot><b>GoodCat</b></a> | <a href = https://github.com/Jisan09/catuserbot><b>BadCat</b></a> | <a href = https://t.me/catuserbot_support><b>Support</b></a>",
+            f"<b>● »» [👤] ➥ My Master : {hmention}</b>\n"
+            f"<b>● »» [🕒] ➥ Uptime :</b> <code>{uptime}</code>\n"
+            f"<b>● »» [🐍] ➥ Python :</b> <code>{python_version()}</code>\n"
+            f"<b>● »» [⚙️] ➥ Telethon :</b> <code>{version.__version__}</code>\n"
+            f"<b>● »» [🤖] ➥ Bot :</b> <code>{catversion}</code>\n"
+            f"<b>● »» [💻] ➥ Database :</b> <code>{check_sgnirts}</code>\n\n"
+            "    | <a href = https://github.com/Akarata/AkaProject><b>Akarata_Project</b></a> | ",
             parse_mode="html",
         )
 
@@ -118,9 +116,9 @@ def check_data_base_heal_th():
 CMD_HELP.update(
     {
         "alive": "__**PLUGIN NAME :** Alive__\
-      \n\n📌** CMD ➥** `.alive`\
-      \n**USAGE   ➥  **To see wether your bot is working or not.\
-      \n\n📌** CMD ➥** `.ialive`\
+      \n\n✅** CMD ➥** `.alive`\
+      \n**USAGE   ➥  **buat liat bot hidup apa kgk\
+      \n\n✅** CMD ➥** `.ialive`\
       \n**USAGE   ➥  **__Status of bot will be showed by inline mode with button__."
     }
 )
