@@ -29,13 +29,13 @@ async def amireallyalive(alive):
 
         cat_caption += f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
         cat_caption += f"┣[ 👤 <code>User       :</code> {hmention}\n"
-        cat_caption += f"┣[ 🕒 <code>Uptime     :</code> {uptime}\n"
+        cat_caption += f"┣[ 🕒 <code>Bot Uptime :</code> {uptime}\n"
         cat_caption += f"┣[ 🐍 <code>Python     :</code> v{python_version()}\n"
         cat_caption += f"┣[ ⚙️ <code>Telethon   :</code> v{version.__version__}\n"
         cat_caption += f"┣[ 🤖 <code>Bot        :</code> v{catversion}\n"
-        cat_caption += f"┣[ 💻 <code>Database   :</code> {check_sgnirts}..\n"
+        cat_caption += f"┣[ 💻 <code>Database   :</code> {check_sgnirts}✓\n"
         cat_caption += f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-        cat_caption += "<code>I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a></code>"
+        cat_caption += "I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a>"
 
         await alive.client.send_file(
             alive.chat_id,
@@ -53,13 +53,13 @@ async def amireallyalive(alive):
             f"{JISAN}\n"
             f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
             f"┣[ 👤 <code>User       :</code> {hmention}\n"
-            f"┣[ 🕒 <code>Uptime     :</code> {uptime}\n"
+            f"┣[ 🕒 <code>Bot Uptime :</code> {uptime}\n"
             f"┣[ 🐍 <code>Python     :</code> v{python_version()}\n"
             f"┣[ ⚙️ <code>Telethon   :</code> v{version.__version__}\n"
             f"┣[ 🤖 <code>Bot        :</code> v{catversion}\n"
-            f"┣[ 💻 <code>Database   :</code> {check_sgnirts}..\n"
+            f"┣[ 💻 <code>Database   :</code> {check_sgnirts}✓\n"
             f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
-            "<code>I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a></code>",
+            "I do exist but not in your heart<a href = https://github.com/iunderhere/PanglimaTempur>🌹</a>",
             parse_mode="html",
         )
 
@@ -73,11 +73,11 @@ async def amireallyalive(alive):
     reply_to_id = alive.message
     if alive.reply_to_msg_id:
         reply_to_id = await alive.get_reply_message()
-    cat_caption = f"**Catuserbot is Up and Running**\n"
-    cat_caption += f"**  -Master :** {mention}\n"
-    cat_caption += f"**  -Python Version :** `{python_version()}\n`"
-    cat_caption += f"**  -Telethon version :** `{version.__version__}\n`"
-    cat_caption += f"**  -Catuserbot Version :** `{catversion}`\n"
+    cat_caption = f"`PanglimaTempur is running...`\n"
+    cat_caption += f"`Lord             :` {mention}\n"
+    cat_caption += f"`Python Version   :` v{python_version()}\n`"
+    cat_caption += f"`Telethon version :` v{version.__version__}\n`"
+    cat_caption += f"`Bot Version      :` v{catversion}`\n"
     results = await bot.inline_query(tgbotusername, cat_caption)  # pylint:disable=E0602
     await results[0].click(alive.chat_id, reply_to=reply_to_id, hide_via=True)
     await alive.delete()
