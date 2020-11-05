@@ -1,47 +1,45 @@
-# Akarata_Project Userbot
+# PanglimaTempur-UserBot
 
-[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
-### The Easy Way to deploy the bot
-Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
+![logo](https://telegra.ph/file/609b7969da44841b31470.png)
 
-[![Get string session](https://repl.it/badge/github/sandy1709/sandeep1709)](https://generatestringsession.sandeep1709.repl.run/)
+<p align="centre"><a href="https://t.me/userbotindo"> <img src="https://img.shields.io/badge/telegram-Support_Group-red?style=social&logo=telegram" alt="Support" /></a><a href="https://github.com/iunderhere/PanglimaTempur/stargazers"><img src="https://img.shields.io/github/stars/iunderhere/PanglimaTempur?label=Start&logoColor=blue&style=social"></a><a href="https://github.com/iunderhere/PanglimaTempur/fork"><img src="https://img.shields.io/github/forks/iunderhere/PanglimaTempur?label=Fork&logoColor=red&style=social"></a>	
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akarata/AkaProject)
-<p align="center">
-  
-### The Normal Way
 
-An example `local_config.py` file could be:
 
-**Not All of the variables are mandatory**
 
-__The Userbot should work by setting only the first two variables__
-
-```python3
-from heroku_config import Var
-
-class Development(Var):
-  APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+```
+/**
+    Your Telegram account may get banned.
+    I am not responsible for any improper use of this bot
+    This bot is intended for the purpose of having fun with memes,
+    as well as efficiently managing groups.
+    You ended up spamming groups, getting reported left and right,
+    and you ended up in a Finale Battle with Telegram and at the end
+    Telegram Team deleted your account?
+    And after that, then you pointed your fingers at us
+    for getting your acoount deleted?
+    I will be rolling on the floor laughing at you.
+/**
 ```
 
-### UniBorg Configuration
+A modular Telegram userbot running on Python3 with sqlalchemy database.
 
+Based on [Catuserbot](https://github.com/sandy1709/catuserbot) And [AkarataProject](https://github.com/Akarata/AkaProject).
 
+## How To Host
+The easiest way to deploy this userbot
+<p><a href="https://heroku.com/deploy?template=https://github.com/iunderhere/PanglimaTempur/tree/master"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="150" height="24.35"/></a></p>
 
-**Heroku Configuration**
-Simply just leave the Config as it is.
+## Generate String
+Generate string using repl.it
+<p><a href="https://string.projectalf.repl.run/"> <img src="https://img.shields.io/badge/Generate%20Session-lightgrey?style=for-the-badge&logo=repl.it" width="150" height="24.35"/></a></p>
 
-**Local Configuration**
+## Groups and Support
+Join [Userbot Indonesia Channel](https://t.me/userbotindocloud) for update notifications or announcement.
 
-Fortunately there are no Mandatory vars for the UniBorg Support Config.
+Join [Userbotindo Support Group](https://t.me/userbotindo) for discussion, bug reporting, and help.
 
-## Mandatory Vars
-
-- Only two of the environment variables are mandatory.
-- This is because of `telethon.errors.rpc_error_list.ApiIdPublishedFloodError`
-
-    - `APP_ID`:   You can get this value from https://my.telegram.org
-    - `API_HASH`:   You can get this value from https://my.telegram.org
-- The userbot will not work without setting the mandatory vars.
+## Partner
+*   [Ajibcdefgh](https://github.com/Ajibcdefgh/ProjectDark) - ProjectDark
+*   [Akarata](https://github.com/Akarata/AkaProject) - AkarataProject
