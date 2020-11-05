@@ -1,7 +1,7 @@
 {
-  "name": "AkarataProject",
-  "description": "Repo based on https://github.com/sandy1709/catuserbot and modified by @Akarata",
-  "logo": "https://telegra.ph/file/47194bb1f28ad74c63872.jpg",
+  "name": "PanglimaTempur",
+  "description": "Repo based on https://github.com/sandy1709/catuserbot and modified with ♥️ by @iunderhere",
+  "logo": "https://telegra.ph/file/4e8c57541f52bc04527fc.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,7 +9,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/Akarata/AkaProject",
+  "repository": "https://github.com/iunderhere/PanglimaTempur",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -19,11 +19,11 @@
     },
     "TMP_DOWNLOAD_DIRECTORY": {
       "description": "Where downloaded files will go.",
-      "value": "./DOWNLOADS/",
+      "value": "./UNDUHAN/",
       "required": false
     },
     "ALIVE_NAME": {
-      "description": "Give your name, Example = Akarata",
+      "description": "Give your name, Example = Andrew HaXor",
       "value": ""
     },
     "APP_ID": {
@@ -58,7 +58,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Your bio here note bio must have only 70characters or less.",
-      "value": "",
+      "value": "// Pun10 Gopud~ //",
       "required": false
     },    
     "MAX_FLOOD_IN_P_M_s": {
@@ -78,7 +78,7 @@
     },
     "ALIVE_PIC": {
       "description": "the pic that to show in your alive message url.",
-      "value": "",
+      "value": "https://telegra.ph/file/07a410320301d394df744.jpg",
       "required": false
     },
     "AUTONAME": {
