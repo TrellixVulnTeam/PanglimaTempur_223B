@@ -1,4 +1,4 @@
-name: AkaChecker
+name: PanglimaChecker
 
 on: [push, pull_request]
 
