@@ -1,28 +1,15 @@
+# Akarata_Project Userbot
 
-# CAT USERBOT
+[![ logo](https://telegra.ph/file/3e712650d6b40736f6a71.jpg)](https://heroku.com/deploy)
 
 ### The Easy Way to deploy the bot
 Get APP ID and API HASH from [HERE](https://my.telegram.org) and BOT TOKEN from [Bot Father](https://t.me/botfather) and then Generate stringsession by clicking on run.on.repl.it button below and then click on deploy to heroku . Before clicking on deploy to heroku just click on fork and star just below
 
 [![Get string session](https://repl.it/badge/github/sandy1709/sandeep1709)](https://generatestringsession.sandeep1709.repl.run/)
 
-[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Jisan09/catuserbot)
+[![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Akarata/AkaProject)
 <p align="center">
-  <a href="https://github.com/Jisan09/catuserbot/fork">
-    <img src="https://img.shields.io/github/forks/Jisan09/catuserbot?label=Fork&style=social">
-    
-  </a>
-  <a href="https://github.com/Jisan09/catuserbot">
-    <img src="https://img.shields.io/github/stars/Jisan09/catuserbot?style=social">
-  </a>
-</p>
-
-
-[![catuserbot logo](https://telegra.ph/file/7e1e89621fabbf02596f8.jpg)](https://heroku.com/deploy)
-
-
-### Join [here](https://t.me/catuserbot17) for updates and tuts and [here](https://t.me/catuserbot_support) for discussion and bugs
-
+  
 ### The Normal Way
 
 An example `local_config.py` file could be:
