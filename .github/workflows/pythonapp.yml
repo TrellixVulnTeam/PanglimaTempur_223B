@@ -1,4 +1,4 @@
-name: catChecker
+name: AkaChecker
 
 on: [push, pull_request]
 
