@@ -20,7 +20,7 @@ from . import runcmd
 HEROKU_APP_NAME = Var.HEROKU_APP_NAME
 HEROKU_API_KEY = Var.HEROKU_API_KEY
 UPSTREAM_REPO_BRANCH = "master"
-UPSTREAM_REPO_URL = "https://github.com/Jisan09/catuserbot"
+UPSTREAM_REPO_URL = "https://github.com/Akarata/AkaProject"
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -39,9 +39,7 @@ async def gen_chlog(repo, diff):
 
 
 async def print_changelogs(event, ac_br, changelog):
-    changelog_str = (
-        f"**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
-    )
+    changelog_str = f"**Update baru tersedia untuk AkaProject[{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`"
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
         file = open("output.txt", "w+")
@@ -140,7 +138,8 @@ async def update(event, repo, ups_rem, ac_br):
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
     await event.edit(
-        "`Successfully Updated!\n" "Bot is restarting... Wait for a minute!`"
+        "`AkaProject berhasil diupdate!\n"
+        "Sedang memulai ulang... Harap tunggu beberapa saat!`"
     )
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
@@ -153,7 +152,9 @@ async def update(event, repo, ups_rem, ac_br):
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
     conf = event.pattern_match.group(1).strip()
-    event = await edit_or_reply(event, "`Checking for updates, please wait....`")
+    event = await edit_or_reply(
+        event, "`Sedang mengecek pembaharuan, Harap tunggu beberapa saat....`"
+    )
     off_repo = UPSTREAM_REPO_URL
     force_update = False
     try:
@@ -205,7 +206,7 @@ async def upstream(event):
         return
     if changelog == "" and not force_update:
         await event.edit(
-            "\n`CATUSERBOT is`  **up-to-date**  `with`  "
+            "\n`Akarata_Project  sudah`  **terupdate**  `oleh`  "
             f"**{UPSTREAM_REPO_BRANCH}**\n"
         )
         return repo.__del__()
@@ -221,7 +222,7 @@ async def upstream(event):
             "`Force-Syncing to latest stable userbot code, please wait...`"
         )
     if conf == "now":
-        await event.edit("`Updating userbot, please wait....`")
+        await event.edit("`Sedang mengupdate AkaProject, tunggu beberapa saat....`")
         await update(event, repo, ups_rem, ac_br)
     return
 
@@ -266,17 +267,17 @@ async def upstream(event):
 
 CMD_HELP.update(
     {
-        "updater": "__**PLUGIN NAME :** Updater__\
-        \n\n📌** CMD ➥** `.update`\
-        \n**Usage :** Checks if the main userbot repository has any updates\
-        \nand shows a changelog if so.\
-        \n\n📌** CMD ➥** `.update now`\
-        \n**USAGE   ➥  **Update your userbot,\
-        \nif there are any updates in your userbot repository.if you restart these goes back to last time when you deployed\
-        \n\n📌** CMD ➥** `.update deploy`\
-        \n**USAGE   ➥  **Deploy your userbot.So even you restart it doesnt go back to previous version\
-        \n\n📌** CMD ➥** `.goodcat`\
-        \n**USAGE   ➥  **Swich to jisan's unoffical repo to official cat repo.\
+        "updater": "__**Nama Plugin :** Updater__\
+        \n\n✅** CMD ➥** `.update`\
+        \n**Digunakan :** untuk mengecek  jika ada userbot ada update terbaru\
+        \ndan menunjukan changelog.\
+        \n\n✅** CMD ➥** `.update now`\
+        \n**Digunakan   ➥  **Untuk mengupdate userbot,\
+        \njika ada pembaruan dalam repositori userbot kamu. jika kamu memulai ulang, ini kembali ke waktu terakhir saat kamu menerapkan\
+        \n\n✅** CMD ➥** `.update deploy`\
+        \n**Digunakan   ➥  **untuk menDeploy userbot kamu\
+        \n\n✅** CMD ➥** `.goodcat`\
+        \n**Digunakan   ➥  **Swich to jisan's unoffical repo to official cat repo.\
         \nThis will triggered deploy always, even no updates."
     }
 )
