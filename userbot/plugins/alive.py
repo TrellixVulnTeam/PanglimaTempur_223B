@@ -10,7 +10,7 @@ CAT_IMG = Config.ALIVE_PIC
 JISAN = (
     str(Config.CUSTOM_ALIVE_TEXT)
     if Config.CUSTOM_ALIVE_TEXT
-    else "PanglimaTempur is running..."
+    else " `PanglimaTempur is running...` "
 )
 
 
@@ -29,7 +29,7 @@ async def amireallyalive(alive):
 
         cat_caption += f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
         cat_caption += f"┣[ 👤 `User      :` {hmention}\n"
-        cat_caption += f"┣[ 🕒 `Uptime    :` <code>{uptime}</code>\n"
+        cat_caption += f"┣[ 🕒 `Uptime    :`  <code>{uptime}</code>\n"
         cat_caption += f"┣[ 🐍 `Python    :` <code>{python_version()}</code>\n"
         cat_caption += f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
         cat_caption += f"┣[ 🤖 `Bot       :` <code>{catversion}</code>\n"
@@ -50,10 +50,10 @@ async def amireallyalive(alive):
     else:
         await edit_or_reply(
             alive,
-            f"`{JISAN}`\n"
+            f"{JISAN}\n"
             f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
             f"┣[ 👤 `User      :` {hmention}\n"
-            f"┣[ 🕒 `Uptime    :` <code>{uptime}</code>\n"
+            f"┣[ 🕒 `Uptime    :`  <code>{uptime}</code>\n"
             f"┣[ 🐍 `Python    :` <code>{python_version()}</code>\n"
             f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
             f"┣[ 🤖 `Bot       :` <code>{catversion}</code>\n"
