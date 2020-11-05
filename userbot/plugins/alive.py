@@ -26,18 +26,14 @@ async def amireallyalive(alive):
         reply_to_id = await alive.get_reply_message()
     if CAT_IMG:
         cat_caption = f"<b>{JISAN}</b>\n"
-        
+
         cat_caption += f"┏━━━━━━━━━━━━━━━━━━━━━━━━\n"
         cat_caption += f"┣[ 👤`User           :` {hmention}\n"
         cat_caption += f"┣[ 🕒 `Uptime     :` <code>{uptime}</code>\n"
         cat_caption += f"┣[ 🐍 `Python     :` <code>{python_version()}</code>\n"
-        cat_caption += (
-            f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
-        )
+        cat_caption += f"┣[ ⚙️ `Telethon  :` <code>{version.__version__}</code>\n"
         cat_caption += f"┣[ 🤖 `Bot            :` <code>{catversion}</code>\n"
-        cat_caption += (
-            f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
-        )
+        cat_caption += f"┣[ 💻 `Database :` <code>{check_sgnirts}</code>\n"
         cat_caption += f"┗━━━━━━━━━━━━━━━━━━━━━━━━\n"
         cat_caption += "<a href = https://github.com/iunderhere/PanglimaTempur>`PanglimaTempur-UserBot`</a>"
 
