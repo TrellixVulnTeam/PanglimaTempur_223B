@@ -49,12 +49,12 @@
     "HEROKU_API_KEY": {
       "description": "Required for updating the bot and other stuff get it from https://dashboard.heroku.com/account",
       "value": "",
-      "required": false
+      "required": true
     },
     "HEROKU_APP_NAME": {
       "description": "YOUR app name ",
       "value": "",
-      "required": false
+      "required": true
     },
     "DEFAULT_BIO": {
       "description": "Your bio here note bio must have only 70characters or less.",
